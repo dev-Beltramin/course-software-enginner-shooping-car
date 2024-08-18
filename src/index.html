@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping car</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <div class="header-content">
+          <h1>My T-shirt</h1>
+
+          <div>
+            <a href="#">LOGIN</a>
+            <a href="#">HELP</a>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <section>
+      <main class="content">
+        <div>
+          <h2>shopping bag</h2>
+
+          <p>2 items</p>
+        </div>
+
+        <div class="content-items">
+          <ul>
+            <div class="item-1">
+              <h3>Products</h3>
+              <li>
+                <img
+                  src="./images/camista.jpg"
+                  alt="produto"
+                  width="150"
+                  height="150"
+                />
+
+                <div>
+                  <p>titulo</p>
+                  <p>desrição</p>
+                  <p>preço</p>
+                  <p>tamanho</p>
+                </div>
+              </li>
+            </div>
+
+            <div class="item-2">
+              <li>
+                <h3>Price</h3>
+                <p>R$ 50.00</p>
+              </li>
+
+              <li>
+                <h3>Quantity</h3>
+                <button id="diminuir" onclick="removeItem()">-</button> <span id="quantidade">1</span> <button id="aumentar" onclick="addItems()">+</button>
+              </li>
+
+              <li>
+                <h3>Total</h3>
+                <p id="totalItem">R$</p>
+              </li>
+            </div>
+          </ul>
+          <section>
+            <div class="total">
+              <b>Valor total :</b>
+              <p id="total"></p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
