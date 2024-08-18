@@ -13,8 +13,9 @@ function addItems(){
     quantidade.innerHTML = Quantidade += 1
      
     valortotal = valorItem * Quantidade
-    totalItem.innerHTML = valortotal
-    total.innerHTML = valortotal
+    totalItem.innerHTML = formatPrice(valortotal)
+    total.innerHTML =formatPrice(valortotal)
+
 }
 
 
@@ -23,9 +24,21 @@ function removeItem(){
     const quantidade = document.getElementById('quantidade')
     const totalItem = document.getElementById('totalItem')
     const total= document.getElementById('total')
+
+    if(Quantidade <= 0){
+      return
+    }
     quantidade.innerHTML = Quantidade -= 1
 
     valortotal = valorItem * Quantidade
-    totalItem.innerHTML = valortotal
-    total.innerHTML = valortotal
+    totalItem.innerHTML = formatPrice(valortotal)
+    total.innerHTML =formatPrice(valortotal)
+}
+
+function formatPrice(price){
+   
+    return new Intl.NumberFormat('pt-BR',{
+        style: 'currency',
+        currency: 'BRL'
+    }).format(price)
 }
